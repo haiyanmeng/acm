@@ -1,0 +1,18 @@
+apiVersion: examples.config.kubernetes.io/v1beta1
+kind: Kubeval
+metadata:
+  name: kubeval-validator
+  annotations:
+    config.kubernetes.io/function: |
+      container:
+        image: gcr.io/kustomize-functions/example-validator-kubeval:v0.1.0
+# Please update the following options when necessary
+spec:
+  # Skip validation for resource definitions without a schema. If omitted, a default value of false will be assumed.
+  ignoreMissingSchemas: true
+  # KubernetesVersion is the version of Kubernetes to validate against (default "master").
+  kubernetesVersion: 1.16.0
+  # The base URL used to download schemas.  If not specified, the default location at https://kubernetesjsonschema.dev/ will be used.
+  schemaLocation: file:///schemas
+  # Disallow additional properties not in schema.  If omitted, a default value of false will be assumed.
+  strict: true
