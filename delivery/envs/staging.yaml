@@ -1,0 +1,6 @@
+cluster_name: haiyanmeng-cluster
+project: haiyanmeng-anthos
+compute:  # choose "region" or "zone"
+   zone: us-central1-c
+namespace: acm-staging
+no_pr_approval_required: false
