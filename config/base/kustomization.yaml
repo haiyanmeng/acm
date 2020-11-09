@@ -1,0 +1,4 @@
+#config/base/kustomization.yaml
+
+resources:
+  - myapp.yaml
