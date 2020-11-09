@@ -32,3 +32,11 @@ spec:
         image: nginx:1.7.9
         ports:
         - containerPort: 80
+---
+apiVersion: "stable.example.com/v1"
+kind: CronTab
+metadata:
+  name: my-new-cron-object
+spec:
+  cronSpec: "* * * * */5"
+  image: my-awesome-cron-image
